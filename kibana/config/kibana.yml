@@ -11,3 +11,22 @@ monitoring.ui.container.elasticsearch.enabled: true
 #
 elasticsearch.username: elastic
 elasticsearch.password: changeme
+
+xpack.security.audit.enabled: true
+xpack.security.audit.appender:
+  type: rolling-file
+  fileName: audit.log
+  policy:
+    type: time-interval
+    interval: 24h
+  strategy:
+    type: numeric
+    max: 10
+  layout:
+    type: json
+
+
+# Export security audit log to system index
+#xpack.security.audit.outputs: index
+# Export http request body to audit log
+#xpack.security.audit.index.events.emit_request_body: true

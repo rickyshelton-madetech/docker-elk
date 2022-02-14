@@ -10,3 +10,11 @@ network.host: 0.0.0.0
 #
 xpack.license.self_generated.type: trial
 xpack.security.enabled: true
+
+xpack.security.audit.enabled: true
+xpack.security.audit.logfile.events.emit_request_body: true
+
+xpack.security.audit.logfile.events.include:
+  - authentication_success
+xpack.security.audit.logfile.events.exclude:
+  - access_granted

@@ -8,6 +8,8 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ./elasticsearch/config/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties:ro,z
+      - ./mounted_logs:/usr/share/elasticsearch/logs/mounted_logs:rw,z
       - elasticsearch:/usr/share/elasticsearch/data:z
     ports:
       - "9200:9200"
