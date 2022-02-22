@@ -11,15 +11,12 @@ network.host: 0.0.0.0
 xpack.license.self_generated.type: trial
 xpack.security.enabled: true
 
-node.roles:
-  - data
+xpack.security.audit.enabled: true
+xpack.security.audit.logfile.events.emit_request_body: true
 
-#index.search.slowlog.threshold.query.warn: 1ms
-#index.search.slowlog.threshold.query.info: 1ms
-#index.search.slowlog.threshold.query.debug: 1ms
-#index.search.slowlog.threshold.query.trace: 1ms
+xpack.security.audit.logfile.events.include:
+  - authentication_success
+xpack.security.audit.logfile.events.exclude:
+  - access_granted
 
-#index.search.slowlog.threshold.fetch.warn: 1ms
-#index.search.slowlog.threshold.fetch.info: 1ms
-#index.search.slowlog.threshold.fetch.debug: 1ms
-#index.search.slowlog.threshold.fetch.trace: 1ms
+node.roles: [ ]

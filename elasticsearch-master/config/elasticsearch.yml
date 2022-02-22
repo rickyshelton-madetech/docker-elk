@@ -12,7 +12,7 @@ xpack.license.self_generated.type: trial
 xpack.security.enabled: true
 
 node.roles:
-  - data
+  - master
 
 #index.search.slowlog.threshold.query.warn: 1ms
 #index.search.slowlog.threshold.query.info: 1ms

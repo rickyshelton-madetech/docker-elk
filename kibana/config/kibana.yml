@@ -4,7 +4,7 @@
 #
 server.name: kibana
 server.host: 0.0.0.0
-elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+elasticsearch.hosts: [ "http://elasticsearch-query:9200" ]
 monitoring.ui.container.elasticsearch.enabled: true
 
 ## X-Pack security credentials
@@ -12,18 +12,18 @@ monitoring.ui.container.elasticsearch.enabled: true
 elasticsearch.username: elastic
 elasticsearch.password: changeme
 
-# xpack.security.audit.enabled: true
-# xpack.security.audit.appender:
-#   type: rolling-file
-#   fileName: audit.log
-#   policy:
-#     type: time-interval
-#     interval: 24h
-#   strategy:
-#     type: numeric
-#     max: 10
-#   layout:
-#     type: json
+#xpack.security.audit.enabled: true
+#xpack.security.audit.appender:
+#  type: rolling-file
+#  fileName: audit.log
+#  policy:
+#    type: time-interval
+#    interval: 24h
+#  strategy:
+#    type: numeric
+#    max: 10
+#  layout:
+#    type: json
 
 
 # Export security audit log to system index

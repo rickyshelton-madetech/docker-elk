@@ -1,0 +1,348 @@
+{
+    "event": {
+        "action": "http_request",
+        "category": [
+            "web"
+        ],
+        "outcome": "unknown"
+    },
+    "http": {
+        "request": {
+            "method": "post"
+        }
+    },
+    "url": {
+        "domain": "localhost",
+        "path": "/internal/bsearch",
+        "port": 5601,
+        "query": "compress=true",
+        "scheme": "http"
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs="
+    },
+    "trace": {
+        "id": "bd3a2e15-e12e-461c-8090-409585598566"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:54:16.874+00:00",
+    "message": "User is requesting [/internal/bsearch] endpoint",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "saved_object_create",
+        "category": [
+            "database"
+        ],
+        "type": [
+            "creation"
+        ],
+        "outcome": "unknown"
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs=",
+        "saved_object": {
+            "type": "search-session",
+            "id": "50c22859-7879-4111-882d-8f5b024eacd4"
+        }
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "trace": {
+        "id": "bd3a2e15-e12e-461c-8090-409585598566"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:54:17.919+00:00",
+    "message": "User is creating search-session [id=50c22859-7879-4111-882d-8f5b024eacd4]",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "http_request",
+        "category": [
+            "web"
+        ],
+        "outcome": "unknown"
+    },
+    "http": {
+        "request": {
+            "method": "post"
+        }
+    },
+    "url": {
+        "domain": "localhost",
+        "path": "/internal/bsearch",
+        "port": 5601,
+        "query": "compress=true",
+        "scheme": "http"
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs="
+    },
+    "trace": {
+        "id": "4f87c38e-be59-447f-a62b-4c26ef4efafe"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:54:32.178+00:00",
+    "message": "User is requesting [/internal/bsearch] endpoint",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "saved_object_create",
+        "category": [
+            "database"
+        ],
+        "type": [
+            "creation"
+        ],
+        "outcome": "unknown"
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs=",
+        "saved_object": {
+            "type": "search-session",
+            "id": "0045c588-bbeb-44ff-b0c4-63ef803782ee"
+        }
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "trace": {
+        "id": "4f87c38e-be59-447f-a62b-4c26ef4efafe"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:54:33.224+00:00",
+    "message": "User is creating search-session [id=0045c588-bbeb-44ff-b0c4-63ef803782ee]",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "http_request",
+        "category": [
+            "web"
+        ],
+        "outcome": "unknown"
+    },
+    "http": {
+        "request": {
+            "method": "post"
+        }
+    },
+    "url": {
+        "domain": "localhost",
+        "path": "/internal/bsearch",
+        "port": 5601,
+        "query": "compress=true",
+        "scheme": "http"
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs="
+    },
+    "trace": {
+        "id": "2bc3c596-933b-4c56-b22a-da2d57510501"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:59:03.869+00:00",
+    "message": "User is requesting [/internal/bsearch] endpoint",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "saved_object_create",
+        "category": [
+            "database"
+        ],
+        "type": [
+            "creation"
+        ],
+        "outcome": "unknown"
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs=",
+        "saved_object": {
+            "type": "search-session",
+            "id": "c04c031d-5b71-406d-86f1-40793eb3e5f7"
+        }
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "trace": {
+        "id": "2bc3c596-933b-4c56-b22a-da2d57510501"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:59:04.925+00:00",
+    "message": "User is creating search-session [id=c04c031d-5b71-406d-86f1-40793eb3e5f7]",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "http_request",
+        "category": [
+            "web"
+        ],
+        "outcome": "unknown"
+    },
+    "http": {
+        "request": {
+            "method": "post"
+        }
+    },
+    "url": {
+        "domain": "localhost",
+        "path": "/internal/bsearch",
+        "port": 5601,
+        "query": "compress=true",
+        "scheme": "http"
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs="
+    },
+    "trace": {
+        "id": "3e516d28-f22a-416f-8462-a82c87aacb99"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:59:24.530+00:00",
+    "message": "User is requesting [/internal/bsearch] endpoint",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}
+{
+    "event": {
+        "action": "saved_object_create",
+        "category": [
+            "database"
+        ],
+        "type": [
+            "creation"
+        ],
+        "outcome": "unknown"
+    },
+    "kibana": {
+        "space_id": "default",
+        "session_id": "1Y1XK211IcFM/aq3KqPU30a5SuDTGuOow5+XZRFZIfs=",
+        "saved_object": {
+            "type": "search-session",
+            "id": "df3b00c6-e8f7-4361-89c3-da28c6295db3"
+        }
+    },
+    "user": {
+        "name": "elastic",
+        "roles": [
+            "superuser"
+        ]
+    },
+    "trace": {
+        "id": "3e516d28-f22a-416f-8462-a82c87aacb99"
+    },
+    "ecs": {
+        "version": "1.12.0"
+    },
+    "@timestamp": "2022-02-18T13:59:25.591+00:00",
+    "message": "User is creating search-session [id=df3b00c6-e8f7-4361-89c3-da28c6295db3]",
+    "log": {
+        "level": "INFO",
+        "logger": "plugins.security.audit.ecs"
+    },
+    "process": {
+        "pid": 8
+    }
+}

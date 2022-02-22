@@ -1,0 +1,38 @@
+{
+    "type": "audit",
+    "timestamp": "2022-02-18T13:59:24,543+0000",
+    "node.id": "cEbh3-2MTRmNxxkNncmwyA",
+    "event.type": "rest",
+    "event.action": "authentication_success",
+    "authentication.type": "REALM",
+    "user.name": "elastic",
+    "user.realm": "reserved",
+    "origin.type": "rest",
+    "origin.address": "172.19.0.5:58628",
+    "realm": "reserved",
+    "url.path": "/logstash*/_async_search",
+    "url.query": "batched_reduce_size=64&wait_for_completion_timeout=100ms&keep_on_completion=true&keep_alive=604800000ms&ignore_unavailable=true&track_total_hits=false&preference=1645192455964",
+    "request.method": "POST",
+    "request.body": "{\"sort\":[{\"@timestamp\":{\"order\":\"desc\",\"unmapped_type\":\"boolean\"}}],\"fields\":[{\"field\":\"*\",\"include_unmapped\":\"true\"},{\"field\":\"@timestamp\",\"format\":\"strict_date_optional_time\"}],\"size\":500,\"version\":true,\"script_fields\":{},\"stored_fields\":[\"*\"],\"runtime_mappings\":{},\"_source\":false,\"query\":{\"bool\":{\"must\":[],\"filter\":[{\"multi_match\":{\"type\":\"best_fields\",\"query\":\"hellomatt2\",\"lenient\":true}},{\"range\":{\"@timestamp\":{\"format\":\"strict_date_optional_time\",\"gte\":\"2022-02-18T13:44:24.482Z\",\"lte\":\"2022-02-18T13:59:24.482Z\"}}}],\"should\":[],\"must_not\":[]}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}",
+    "request.id": "gJ6rwOpPQuiDPO7pCWASrQ",
+    "opaque_id": "3e516d28-f22a-416f-8462-a82c87aacb99"
+}
+{
+    "type": "audit",
+    "timestamp": "2022-02-18T13:59:24,543+0000",
+    "node.id": "cEbh3-2MTRmNxxkNncmwyA",
+    "event.type": "rest",
+    "event.action": "authentication_success",
+    "authentication.type": "REALM",
+    "user.name": "elastic",
+    "user.realm": "reserved",
+    "origin.type": "rest",
+    "origin.address": "172.19.0.5:58630",
+    "realm": "reserved",
+    "url.path": "/logstash*/_async_search",
+    "url.query": "batched_reduce_size=64&wait_for_completion_timeout=100ms&keep_on_completion=true&keep_alive=604800000ms&ignore_unavailable=true&track_total_hits=true&preference=1645192455964",
+    "request.method": "POST",
+    "request.body": "{\"size\":0,\"aggs\":{\"2\":{\"date_histogram\":{\"field\":\"@timestamp\",\"fixed_interval\":\"30s\",\"time_zone\":\"Europe/London\",\"min_doc_count\":1}}},\"fields\":[{\"field\":\"@timestamp\",\"format\":\"date_time\"}],\"script_fields\":{},\"stored_fields\":[\"*\"],\"runtime_mappings\":{},\"_source\":{\"excludes\":[]},\"query\":{\"bool\":{\"must\":[],\"filter\":[{\"multi_match\":{\"type\":\"best_fields\",\"query\":\"hellomatt2\",\"lenient\":true}},{\"range\":{\"@timestamp\":{\"format\":\"strict_date_optional_time\",\"gte\":\"2022-02-18T13:44:24.482Z\",\"lte\":\"2022-02-18T13:59:24.482Z\"}}}],\"should\":[],\"must_not\":[]}}}",
+    "request.id": "MWij3ADgQQKchQ9dU2DzyA",
+    "opaque_id": "3e516d28-f22a-416f-8462-a82c87aacb99"
+}

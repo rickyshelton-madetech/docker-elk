@@ -8,8 +8,6 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
-      - ./elasticsearch/config/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties:ro,z
-      - ./mounted_logs:/usr/share/elasticsearch/logs/mounted_logs:rw,z
       - elasticsearch:/usr/share/elasticsearch/data:z
     ports:
       - "9200:9200"
@@ -21,8 +19,8 @@ services:
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       #discovery.type: single-node
       node.name: elasticsearch
-      discovery.seed_hosts: elasticsearch-ingest
-      cluster.initial_master_nodes: elasticsearch
+      discovery.seed_hosts: elasticsearch-master
+      cluster.initial_master_nodes: elasticsearch-master
     networks:
       - elk
 
@@ -43,8 +41,54 @@ services:
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       #discovery.type: single-node
       node.name: elasticsearch-ingest
-      discovery.seed_hosts: elasticsearch
-      cluster.initial_master_nodes: elasticsearch
+      discovery.seed_hosts: elasticsearch-master
+      cluster.initial_master_nodes: elasticsearch-master
+    networks:
+      - elk
+
+  elasticsearch-query:
+    build:
+      context: elasticsearch-query/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./elasticsearch-query/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ./elasticsearch-query/config/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties:ro,z
+      - ./mounted_logs:/usr/share/elasticsearch/logs/mounted_logs:rw,z
+    ports:
+      - "9202:9200"
+      - "9302:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
+      ELASTIC_PASSWORD: changeme
+      # Use single node discovery in order to disable production mode and avoid bootstrap checks.
+      # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+      #discovery.type: single-node
+      node.name: elasticsearch-query
+      discovery.seed_hosts: elasticsearch-master
+      cluster.initial_master_nodes: elasticsearch-master
+    networks:
+      - elk
+
+  elasticsearch-master:
+    build:
+      context: elasticsearch-master/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./elasticsearch-master/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+    ports:
+      - "9203:9200"
+      - "9303:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
+      ELASTIC_PASSWORD: changeme
+      # Use single node discovery in order to disable production mode and avoid bootstrap checks.
+      # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+      #discovery.type: single-node
+      node.name: elasticsearch-master
+      discovery.seed_hosts: elasticsearch-master
+      cluster.initial_master_nodes: elasticsearch-master
     networks:
       - elk
 
